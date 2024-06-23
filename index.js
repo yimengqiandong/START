@@ -19,13 +19,5 @@ function ty() {
 function cyx() {
   alert("我的邮箱是：chc1718345936626@163.com");
 }
-function tiaozhuan() {
-  let w = screen.width;
-  if (w > 600) {
-    window.open("shouji.html");
-  } else {
-    document.body.style.backgroundImage = "url('2.jpg')"; //添加背景图片（缩短加载时间）
-  }
-}
 
 //CZQ,CYX，CWX
