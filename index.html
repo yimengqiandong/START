@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <script src="index.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qiandong起始页</title>
+    <style>
+      body {
+        background-image: url("1.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      input[type="button"] {
+        width: 70%;
+        max-width: 300px;
+        height: 35px;
+        background: linear-gradient(90deg, #2bd800, #fffb00, #00fff7, #2bd800);
+        background-size: 500%;
+        color: white;
+
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      @keyframes animate {
+        from {
+          background-position: 0%;
+        }
+        to {
+          background-position: 500%;
+        }
+      }
+
+      input[type="button"]:hover {
+        animation: animate 8s linear infinite;
+      }
+
+      @media (max-width: 500px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        text-align: center; /* 文本中央 */
+        background-color: #f2f2f2; /* 背景 */
+        opacity: 0.9;
+        width: 90%; /*宽度*/
+        max-width: 500px;
+        height: 39%; /*高度*/
+        max-height: 300px;
+        height: 39%; /*高度*/
+        min-height: 220px;
+
+        border-radius: 6px;
+        position: absolute;
+        left: 50%;
+        top: 30%; /*位置高度*/
+        transform: translate(-50%, -50%); /* 中央 */
+      "
+    >
+      <h1>home page</h1>
+      <br />
+
+      <input
+        type="password"
+        value=""
+        id="myInput"
+        placeholder="请输入密钥"
+        style="
+          width: 70%;
+          max-width: 300px;
+          height: 30px;
+          display: inline;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        "
+      /><br /><br />
+
+      <input
+        id="button"
+        type="button"
+        class="btn"
+        value="提交"
+        onclick="ty()"
+      />
+    </div>
+  </body>
+</html>
