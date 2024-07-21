@@ -1,9 +1,134 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Z字型分班程序</title>
+    <style>
+      input[type="button"] {
+        width: 70%;
+        max-width: 300px;
+        height: 35px;
+        background: #2bd800;
+        background-size: 500%;
+        color: white;
+
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 5%;
+      }
+
+      input[type="button"]:hover {
+        background-color: #009905;
+      }
+      .btn:active {
+        background-color: #4caf50;
+        color: white;
+        transform: translateY(2px);
+      }
+
+      @media (max-width: 500px) {
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div
+      style="
+        text-align: center; /* 文本中央 */
+        background-color: #f2f2f2; /* 背景 */
+        opacity: 0.9;
+        width: 90%; /*宽度*/
+        max-width: 500px;
+        height: 39%; /*高度*/
+        max-height: 300px;
+        height: 39%; /*高度*/
+        min-height: 266px; /*距离上面高度*/
+        margin-top: 10%;
+        border-radius: 6px;
+        position: absolute;
+        left: 50%;
+        top: 30%; /*位置高度*/
+        transform: translate(-50%, -50%); /* 中央 */
+      "
+    >
+      <h1>Z字型分班程序</h1>
+      <br />
+
+      <input
+        type="number"
+        value=""
+        id="generalclass"
+        placeholder="总班级数"
+        style="
+          width: 70%;
+          max-width: 300px;
+          height: 30px;
+          display: inline;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        "
+      />
+
+      <br /><br />
+
+      <input
+        type="number"
+        value=""
+        id="order"
+        placeholder="年级排名"
+        style="
+          width: 70%;
+          max-width: 300px;
+          height: 30px;
+          display: inline;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        "
+      />
+
+      <input id="button" type="button" class="btn" value="提交" onclick="c()" />
+    </div>
+    <script>
+      function c() {
+        let generalclass = document.getElementById("generalclass").value; //读取内容
+        let order = document.getElementById("order").value; //读取内容
+        let c;
+        let yu;
+        let shuchu;
+
+        //alert(typeof generalclass);
+
+        //类型转换为数字
+        generalclass = Number(generalclass);
+        order = Number(order);
+        yu = Number(yu);
+        //alert(typeof generalclass);
+
+        //alert("总班级数为" + generalclass);
+        //alert("年级排名为" + order);
+        //alert("你在的班级数为" + generalclass * 2 - order);
+        if (generalclass === 0 || order === 0) {
+          alert(
+            "你在干什么！！！！！！！！！！！！！！！！！！！！！！！！！！！"
+          );
+        } else if (order <= generalclass) {
+          alert("你在的班级数为" + order);
+        } else if (order > generalclass && order <= generalclass * 2 - 1) {
+          let shuchu = generalclass * 2 - order;
+          alert("你在的班级数为" + shuchu);
+        } else {
+          yu = order % generalclass;
+          if (yu == 0) {
+            alert("你所在的班级数为8");
+          } else if (yu <= generalclass) {
+            alert("你在的班级数为" + yu);
+          } else if (yu > generalclass && yu <= generalclass * 2 - 1) {
+            let shuchu = generalclass * 2 - yu;
+            alert("你在的班级数为" + shuchu);
+          }
+        }
+      }
+    </script>
+  </body>
 </html>

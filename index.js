@@ -4,7 +4,7 @@ function ty() {
   if (text == "") {
     setTimeout("alert('密钥不能为空')", 160);
   } else if (text == "CZQ") {
-    window.open("https://yimengqiandong.github.io/CZQ/"); //打开qiandong
+    setTimeout(window.open("https://yimengqiandong.github.io/CZQ/")); //打开qiandong
   } else if (text == "CYX") {
     //显示邮箱
     setTimeout("cyx()", 160);
@@ -16,7 +16,9 @@ function ty() {
       100
     );
     setTimeout('window.open("GAME.html");', 200);
-  } else if (text != "CZQ") {
+  } else if (text == "CLASS") {
+    setTimeout('window.open("class.html");', 100);
+  } else {
     setTimeout('alert("该密钥输入错误或不存在！")', 160);
     document.getElementById("myInput").value = "";
   }
@@ -26,4 +28,4 @@ function cyx() {
   alert("我的邮箱是：chc1718345936626@163.com");
 }
 
-//CZQ，CYX，CWX，GAME
+//CZQ，CYX，CWX，GAME,CLASS
