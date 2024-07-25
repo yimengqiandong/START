@@ -18,6 +18,8 @@ function ty() {
     setTimeout('window.open("GAME.html");', 200);
   } else if (text == "CLASS") {
     setTimeout('window.open("class.html");', 100);
+  } else if (text == "TX") {
+    setTimeout('window.open("txguide.html");', 100);
   } else {
     setTimeout('alert("该密钥输入错误或不存在！")', 160);
     document.getElementById("myInput").value = "";
