@@ -17,6 +17,15 @@
         border-radius: 6px;
         border: 3px ridge rgb(255, 210, 155);
       }
+      .introduce {
+        padding: 6px;
+        padding-top: 3px;
+        margin: 0;
+        border-radius: 6px;
+        border: solid;
+        border-color: rgb(255, 210, 155);
+        margin-top: 15px;
+      }
       .all {
         max-width: 600px;
         margin: auto;
@@ -41,6 +50,26 @@
         border-radius: 6px;
         border: solid;
         border-color: rgb(0, 83, 185);
+        text-decoration: none;
+      }
+      .hv:hover {
+        background-color: rgba(92, 155, 218, 0.661);
+      }
+      .lj {
+        background-color: antiquewhite;
+        padding: 6px;
+        padding-top: 3px;
+        margin: 0;
+        border-radius: 6px;
+      }
+      .xm {
+        background-color: rgba(255, 225, 161, 0.339);
+        color: rgb(123, 82, 0);
+        padding: 6px;
+        border-radius: 6px;
+        border: solid;
+        border-color: rgb(185, 151, 0);
+        text-decoration: none;
       }
     </style>
   </head>
@@ -55,50 +84,104 @@
         </p>
       </div>
       <br />
-      <br />
       <div>
         <h3 class="h">1.铁锈战争游戏介绍</h3>
         <br />
-        <img src="tx.png" width="50px" style="margin-top: 10px" />
-        <p style="margin-top: 0">
-          铁锈战争（Rusted Warfare）是一款用Java语言开发，由Corroding Games
-          制作发行能够运行在多平台的RTS即时战略类游戏，其玩法类似于红警，并且其支持海量模组拓展。游戏需要你自己亲自去体验！！！
-        </p>
-        <p>
-          更多详细资料可查看<a
-            href="https://rustedwarfare.org/wiki/%E9%A6%96%E9%A1%B5"
-            >铁锈战争百科(RustedWiki)</a
-          >
-        </p>
+        <div class="introduce">
+          <img src="tx.png" width="50px" style="padding-top: 5px" />
+          <p style="margin-top: 0">
+            铁锈战争（Rusted Warfare）是一款用Java语言开发，由Corroding Games
+            制作发行能够运行在多平台的RTS即时战略类游戏，其玩法类似于红警，并且其支持海量模组拓展。游戏需要你自己亲自去体验！！！
+          </p>
+          <p>
+            更多详细资料可查看<a
+              href="https://rustedwarfare.org/wiki/%E9%A6%96%E9%A1%B5"
+              >铁锈战争百科(RustedWiki)</a
+            >
+          </p>
+        </div>
         <br />
         <h3 class="h">2.游戏下载</h3>
         <br />
-        <p>正版付费下载</p>
-        <a class="dl" href="http://corrodinggames.com/rusted_warfare"
-          >铁锈战争官网(Corroding Games)下载</a
-        >
-        <br />
-        <br />
-        <a
-          class="dl"
-          href="https://store.steampowered.com/app/647960/Rusted_Warfare__RTS/"
-          >Steam下载</a
-        >
-        <br />
-        <br />
-        <p>其他下载</p>
-        <a class="dl" href="https://dl.3dmgame.com/pc/111168.html"
-          >3DMGAME下载</a
-        >
-        <br />
-        <br />
-        <a class="dl" href="http://ww.rtsbox.cn/">铁锈盒子</a>
-        <br />
-        <br />
+        <div class="introduce">
+          <p>正版付费下载</p>
+          <a class="dl hv" href="http://corrodinggames.com/rusted_warfare"
+            >铁锈战争官网(Corroding Games)下载</a
+          >
+          <br />
+          <br />
+          <a
+            class="dl hv"
+            href="https://store.steampowered.com/app/647960/Rusted_Warfare__RTS/"
+            >Steam下载</a
+          >
+          <br />
+          <br />
+          <p>其他下载</p>
+          <a class="dl hv" href="https://dl.3dmgame.com/pc/111168.html"
+            >3DMGAME下载</a
+          >
+          <br />
+          <br />
+          <a class="dl hv" href="http://ww.rtsbox.cn/">铁锈盒子</a>
+          <br />
+          <br />
+        </div>
+
         <br />
         <h3 class="h">3.铁锈联机</h3>
+
         <br />
-        <p>除单人游戏外铁锈战争人支持多人联机，联机方法如下：</p>
+        <br />
+        <div class="lj">
+          <p>1.局域网联机</p>
+          <p>
+            打开游戏点进“多人游戏”再点击右侧“创建房间”，创建房间（如勾选MOD选项需要有相同的模组才可进入），进入房间。
+          </p>
+          <p>
+            另一台设备进入需在多人游戏界面中“直接加入”部分输入房间页面上方的"Local
+            IP address:"后面的一串IP地址(例如:192.168.3.24)则可进入房间
+          </p>
+          <p style="color: red">
+            注意:两台设备必须在同一局域网(网络或热点)下！！！
+          </p>
+        </div>
+        <br />
+        <div class="lj">
+          <p>2.官方服务器(官房)</p>
+          <p>
+            服务器列表中玩家名称为SEVER的战役室，如果有人创建好的话可以直接加入，如果该服务器内还没有人加入弹出提示框，则需输入“new”（直接创建原版房间）或“mods”（创建有模组的房间，玩家必须都载入有相同模组）然后点击“Submit”即创建成功。
+          </p>
+          <p>
+            另一台设备则需在直接加入部分输入房间页面上方的“ROM
+            ID”（例如：R23851，<span style="color: red"
+              >前面的大写字母R必须加上！</span
+            >）即可加入服务器。
+          </p>
+        </div>
+        <br />
+        <div class="lj">
+          <p>3.创建服务器</p>
+          <p>
+            在多人游戏的直接加入部分,随意输一个以大写字母"R"开头,后面加字少四位数字或字母(例如:R123456,Rabcde。建议只用数字)，点击加入后在输入框中输入“new”创建一个服务器或“mods”创建一个支持mod的服务器，即可创建成功。
+          </p>
+          <p>
+            另一台设备则需在直接加入部分输入房间页面上方的“ROM
+            ID”（例如：R23851，<span style="color: red"
+              >前面的大写字母R必须加上！</span
+            >）即可加入服务器。
+          </p>
+        </div>
+        <br />
+        <div class="lj">
+          <p>4.关于铁锈排位</p>
+          <p>铁锈战争也有专门的排位服务器,即小明排位服，可直接加入</p>
+          <a href="https://xmrank.rwhps.net/" class="xm">小明排位服官网</a>
+          <br />
+          <br />
+        </div>
+        <br />
+        <h3 class="h">4.铁锈模组</h3>
       </div>
     </div>
   </body>
