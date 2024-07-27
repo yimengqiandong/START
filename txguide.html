@@ -72,10 +72,87 @@
         border-color: rgb(185, 151, 0);
         text-decoration: none;
       }
+      .sidepanel {
+        /*展开的元素*/
+        width: 0;
+        position: fixed; /*使导航栏固定在页面的指定位置*/
+        z-index: 1; /*使元素处在最顶层不被遮盖*/
+        height: 250px;
+        top: 0;
+        left: 0;
+        background-color: #fee4c293;
+        overflow-x: hidden; /*溢出的内容会被截断不显示滚动条*/
+        transition: 0.5s; /*过渡动画*/
+        padding-top: 60px;
+        border: solid;
+        border-color: rgba(160, 120, 46, 0.709);
+        border-radius: 10px 40px 40px 10px;
+      }
+      /*元素内a标签的样式*/
+      .sidepanel a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #634400;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidepanel a:hover {
+        color: #f1f1f1;
+      }
+
+      .sidepanel .closebtn {
+        position: absolute;
+        cursor: pointer; /*鼠标放到该元素上的样式*/
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+      }
+
+      .openbtn {
+        font-size: 15px;
+        cursor: pointer;
+        background-color: rgba(255, 225, 161, 0.339);
+        color: rgb(123, 82, 0);
+        padding: 6px;
+        border: solid;
+        border-color: rgb(185, 151, 0);
+        text-decoration: none;
+        margin: 5px;
+        min-height: 20px;
+      }
+
+      .openbtn:hover {
+        background-color: #ffd07ead;
+      }
     </style>
   </head>
 
-  <body>
+  <body style="margin: 0">
+    <!-------------------------目录------------------------------->
+    <div id="guide" class="sidepanel">
+      <a class="closebtn" onclick="C()">×</a>
+      <a href="#introduce">游戏介绍</a>
+      <a href="#dl">游戏获取</a>
+      <a href="#lj">游戏联机</a>
+      <a href="#mod">游戏模组</a>
+      <a href="#other">游戏资源</a>
+    </div>
+    <!-------------------------------------------------------->
+    <div
+      style="
+        display: block;
+        background-color: #fff1a36a;
+        max-width: 600px;
+        margin: auto;
+      "
+    >
+      <button class="openbtn" onclick="O()">☰ 目录</button>
+      <button class="openbtn" onclick="a()" style="padding-top: 8.5px">
+        ABOUT
+      </button>
+    </div>
     <div class="all">
       <div class="top">
         <!--顶栏-->
@@ -86,7 +163,8 @@
       </div>
       <br />
       <div>
-        <h3 class="h">铁锈战争游戏介绍</h3>
+        <h3 class="h" id="introduce">铁锈战争游戏介绍</h3>
+
         <div class="introduce">
           <img src="tx.png" width="50px" />
           <p style="margin-top: 0">
@@ -102,7 +180,7 @@
         </div>
         <br />
 
-        <h3 class="h">游戏下载</h3>
+        <h3 class="h" id="dl">游戏下载</h3>
         <div class="introduce">
           <p>正版付费下载</p>
           <a class="dl hv" href="http://corrodinggames.com/rusted_warfare"
@@ -129,7 +207,7 @@
         </div>
         <br />
 
-        <h3 class="h">铁锈联机</h3>
+        <h3 class="h" id="lj">铁锈联机</h3>
         <div class="introduce">
           <div class="lj">
             <p>1.局域网联机</p>
@@ -181,7 +259,7 @@
         </div>
         <br />
 
-        <h3 class="h">铁锈模组</h3>
+        <h3 class="h" id="mod">铁锈模组</h3>
         <div class="introduce">
           <div class="lj">
             <p>1.模组介绍</p>
@@ -211,7 +289,7 @@
           <br />
           <div class="lj">
             <p>3.模组制作</p>
-            <p>关于铁锈战争的模组制作网上有很多教程我这里推荐几个</p>
+            <p>关于铁锈战争的模组制作网上有很多教程,我这里推荐几个</p>
             <p><a href=" https://b23.tv/uwW3vsg">双管MZM的教程</a></p>
             <p>主要基于铁锈助手制作,全中文开发非常简单</p>
             <iframe
@@ -247,7 +325,7 @@
         </div>
         <br />
 
-        <h3 class="h">资源合集</h3>
+        <h3 class="h" id="other">资源合集</h3>
         <div class="introduce">
           <div class="lj">
             <p style="font-size: 20px; margin-top: 0">资源网站</p>
@@ -296,5 +374,17 @@
         </div>
       </div>
     </div>
+    <script>
+      function O() {
+        document.getElementById("guide").style.width = "200px";
+      }
+
+      function C() {
+        document.getElementById("guide").style.width = "0";
+      }
+      function a() {
+        alert("QQ:3873630225\nwx:yimengqiandong");
+      }
+    </script>
   </body>
 </html>
