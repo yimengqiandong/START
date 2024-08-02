@@ -20,6 +20,8 @@ function ty() {
     setTimeout('window.open("class.html");', 100);
   } else if (text == "TX") {
     setTimeout('window.open("txguide.html");', 100);
+  } else if (text == "F") {
+    setTimeout(window.open("https://yimengqiandong.github.io/Front/")); //打开qiandong
   } else {
     setTimeout('alert("该密钥输入错误或不存在！")', 160);
     document.getElementById("myInput").value = "";
