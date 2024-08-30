@@ -21,12 +21,27 @@ function ty() {
   } else if (text == "TX") {
     setTimeout('window.open("txguide.html");', 100);
   } else if (text == "F") {
-    setTimeout(window.open("https://yimengqiandong.github.io/Front/")); //打开qiandong
+    setTimeout(window.open("https://yimengqiandong.github.io/Front/"));
   } else {
     setTimeout('alert("该密钥输入错误或不存在！")', 160);
     document.getElementById("myInput").value = "";
   }
 }
+//虽然我知道可以用switch语句但是我就想用if else
+//这坨等下次再优化吧~
+//懒~~~~~
+//
+//       　  　▃▆█▇▄▖
+//　 　 　 ▟◤▖　　　◥█▎
+//   　 ◢◤　 ▐　　　 　▐▉
+//　 ▗◤　　　▂　▗▖　　▕█▎
+//　◤　▗▅▖◥▄　▀◣　　█▊
+//▐　▕▎◥▖◣◤　　　　◢██
+//█◣　◥▅█▀　　　　▐██◤
+//▐█▙▂　　     　◢██◤
+//◥██◣　　　　◢▄◤
+// 　　▀██▅▇▀
+//----------来自章鱼加速器
 
 function cyx() {
   alert("我的邮箱是：chc1718345936626@163.com");
