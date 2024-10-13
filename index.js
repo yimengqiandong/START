@@ -22,6 +22,8 @@ function ty() {
     setTimeout('window.open("txguide.html");', 100);
   } else if (text == "F") {
     setTimeout(window.open("https://yimengqiandong.github.io/Front/"));
+  } else if (text == "W") {
+    setTimeout(window.open("wsy.html"), 100);
   } else {
     setTimeout('alert("该密钥输入错误或不存在！")', 160);
     document.getElementById("myInput").value = "";
